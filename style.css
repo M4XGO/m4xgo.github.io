@@ -1,0 +1,111 @@
+body {
+    font: small-caps 24px/1 sans-serif;
+    background-image: url(background.jpg);
+}
+
+
+#container{
+    margin: 5%;
+}
+
+h1 {
+    border-bottom: 2px solid black;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+    
+}   
+
+button{
+    border: none;
+    padding: 3%;
+    font-size: 1.2em;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(186,186,201,1) 50%, rgba(245,245,245,1) 100%); 
+    color: rgba(0, 0, 0, 0.705);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+button:hover {
+    background: none;
+    background: linear-gradient(45deg,rgba(245,245,245,1) 0%, rgba(186,186,201,1) 50%,  rgba(0,0,0,1) 100%); 
+    color: rgba(255, 255, 255, 0.63);
+}
+
+.centrer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 15px;
+    background-color:whitesmoke;
+  }
+  .card p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    margin-top: 5%;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 16em
+}
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .containerBis {
+    padding: 2px 16px;
+  }
+
+footer {
+   margin-bottom: 0%;
+   background-color: rgba(0, 0, 0, 0.675);
+   padding: 3%;
+   color: white;
+   position:fixed;
+    bottom: 0;
+   width:100%;
+   height:100px;
+}
+.under {
+    text-decoration: underline;
+}
+
+
+@media (min-width: 300px) and (max-width: 1000px) { /*responsive pour les mobiles*/ 
+    .card img {
+        margin-top: 5%;
+        border-radius: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10em
+    }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 70%;
+        border-radius: 15px;
+        background-color:whitesmoke;
+      }
+  }
+  
