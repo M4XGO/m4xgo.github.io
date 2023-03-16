@@ -21,15 +21,15 @@ function fetchPhotos() { // appelle de l'api
 function afficheDatas(data) {//fonction d'affichage 
                 const ici = document.getElementById('ici');// recupération de l'id ou ça va être écrit
                 let nomaAfficher= "";// variable qui va être remplie par les info
-                const randomPerso = Math.floor(Math.random() * 402);//Choisir un perso random ==> il y a 400 perso mais que 25 on une photo
+                const randomPerso = Math.floor(Math.random() * 25);//Choisir un perso random ==> il y a 400 perso mais que 25 on une photo
                 console.log(randomPerso);
                 
-                if (data[randomPerso]['image'] === "" && data[randomPerso]['gender'] === "female"){//cas ou c'est une femme sans photo
+                /*if (data[randomPerso]['image'] === "" && data[randomPerso]['gender'] === "female"){//cas ou c'est une femme sans photo
                     nomaAfficher += "<img src='sorciere.png'><br>";
                 }
                 if (data[randomPerso]['image'] === "" && data[randomPerso]['gender'] === "male"){//cas ou c'est un homme sans photo
                     nomaAfficher += "<img src='sorcier.png'><br>"
-                }
+                }*/ // que si il y a les 400 persos 
                 nomaAfficher += "<img src='"+data[randomPerso]['image']+"'><br>"+ // remplissage de la variable qui va être envoyé à l'ID ici avec les infos voulus (photo/nom/sorcier ou pas)
                 "<div class='containerBis'>"+
                 "<h3><b>"+data[randomPerso]['name']+"</b></h3>"+
