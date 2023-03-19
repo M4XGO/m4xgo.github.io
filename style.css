@@ -183,7 +183,7 @@ button{
     height: 100%; /* Full height */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    border: 1px solid red;
+
 }
 
 
@@ -238,7 +238,6 @@ button{
         width: 75%;
         border-radius: 15px;
         height: 80%;
-        border: 1px solid red;
         margin-top: -5%;
         
       }
