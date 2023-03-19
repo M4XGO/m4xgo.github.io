@@ -9,13 +9,72 @@
 </head>
 <body>
 <div id="container">
-    <h1 class="centrer">Quelle personnage d'Harry Potter êtes vous ?</h1>
-    <button id="myButton">Afficher votre perso</button>
-   <div class="centrer">
-    <div id="ici" class="card">
+    <h1 class="centrer">Quel personnage d'Harry Potter êtes vous ?</h1>
+
+    <h2>Commencez par répondre à ces questions :</h2>
+
     
+    <div id="questionniaire">
+        <h4>Quelle est la couleur de vos yeux ? </h4>
+        <div id="yeuxId">
+            <p><input type="radio" name="yeux" id="yeuxB" value="blue"> 
+            <label for="yeuxB">Bleu</label>
+            <input type="radio" name="yeux" id="yeuxG" value="grey"> 
+            <label for="yeuxG">Bleu Claire</label>
+            <input type="radio" name="yeux" id="yeuxR" value="red"> 
+            <label for="yeuxR">Rouge</label>
+            <input type="radio" name="yeux" id="yeuxM" value="brown"> 
+            <label for="yeuxM">Marron</label>
+            <input type="radio" name="yeux" id="yeuxV" value="green"> 
+            <label for="yeuxV">Vert</label></p>
+        </div>
+        <h4>De quelle couleur sont vos cheveux ?</h4>
+        <div id="cheveuxId">
+            <p><input type="radio" name="cheveux" id="cheveuxBr" value="brown">
+            <label for="cheveuxBr">Brun</label>
+            <input type="radio" name="cheveux" id="cheveuxB" value="blonde"> 
+            <label for="cheveuxB">Blond</label>
+            <input type="radio" name="cheveux" id="cheveuxR" value="red"> 
+            <label for="cheveuxR">Roux</label>
+            <input type="radio" name="cheveux" id="cheveuxN" value="black"> 
+            <label for="cheveuxN">Noir</label>
+            <input type="radio" name="cheveux" id="cheveuxG" value="grey"> 
+            <label for="cheveuxG">Gris</label></p>
+        </div>
+        <h4>Femme ou Homme ? </h4>
+        <div id="genreId">
+            <p><input type="radio" name="genre" id="homme" value="male"> 
+                <label for="homme">Homme</label>
+            <input type="radio" name="genre" id="femme" value="female"> 
+            <label for="femme">Femme</label></p>
+           
+        </div>
+        <h4>Quelle est votre maison ? </h4>
+        <div id="maisonId">
+            <p><input type="radio" name="maison" id="maisonG" value="Gryffindor"> 
+                <label for="maisonG">Gryffondor<img src="Blason_Gryffondor.svg.png" alt="Blason_Gryffondor"></label>
+            <input type="radio" name="maison" id="maisonP" value="Hufflepuff"> 
+            <label for="maisonP">Poufsouffle<img src="Hufflepuff.svg.png" alt="Blason_Poufsouffle"></label>
+            <input type="radio" name="maison" id="maisonS" value="Ravenclaw"> 
+            <label for="maisonS">Serdaigle<img src="Blason_Serdaigle.svg.png" alt="Blason_Serdaigle"></label>
+            <input type="radio" name="maison" id="maisonSerp" value="Slytherin"> 
+            <label for="maisonSerp">Serpentard<img src="Blason_Serpentard.svg.png" alt="Blason_Serpentard"></label></p>
+            
+           
+        </div>
+        
     </div>
-    </div>
+
+    <button id="myButton" class="button-arounder">Affichez votre personnage</button>
+   
+        <div id="myModal" class="modal">
+            <span class='close'>&times;</span>
+            <div id="ici" class="card centrer">
+                
+                
+            </div>
+        </div>
+    
 </div>
 
 

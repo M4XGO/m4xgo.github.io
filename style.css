@@ -15,24 +15,61 @@ h1 {
     
 }   
 
+.button-arounder {
+    font-size: 2rem;
+  background: rgb(103, 103, 103);
+  color: hsl(190deg, 10%, 95%);
+  
+  box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, .2);
+  transfrom: translateY(0);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  
+  --dur: .15s;
+  --delay: .15s;
+  --radius: 16px;
+  
+  transition:
+    border-top-left-radius var(--dur) var(--delay) ease-out,
+    border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+    border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+    border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+    box-shadow calc(var(--dur) * 4) ease-out,
+    transform calc(var(--dur) * 4) ease-out,
+    background calc(var(--dur) * 4) steps(4, jump-end),
+    color calc(var(--dur) * 4) steps(4, jump-end);;
+
+}
+
+.button-arounder:hover,
+.button-arounder:focus {
+  box-shadow: 0 4px 8px hsla(190deg, 15%, 5%, .2);
+  transform: translateY(-4px);
+  background: rgb(209, 209, 209);
+  color: black;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+
+
 button{
-    border: none;
-    padding: 3%;
-    font-size: 1.2em;
-    border-radius: 15px;
-    background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(186,186,201,1) 50%, rgba(245,245,245,1) 100%); 
-    color: rgba(0, 0, 0, 0.705);
+    
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
+
+    background: white;
+    border: solid 2px black;
+    padding: .375em 1.125em;
+    font-size: 1rem;
 }
 
-button:hover {
-    background: none;
-    background: linear-gradient(45deg,rgba(245,245,245,1) 0%, rgba(186,186,201,1) 50%,  rgba(0,0,0,1) 100%); 
-    color: rgba(255, 255, 255, 0.63);
-}
 
 .centrer {
     display: flex;
@@ -40,61 +77,152 @@ button:hover {
     justify-content: center;
 }
 
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 40%;
+    width: 70%;
+    height:60%;
     border-radius: 15px;
-    background-color:whitesmoke;
+    
+    margin: auto;
+    padding: 20px;
   }
   .card p {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
 }
 
 .card h3 {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
+    text-decoration: underline;
 }
 
 .card img {
-    margin-top: 5%;
-    border-radius: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 16em
-}
-  
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  .containerBis {
-    padding: 2px 16px;
-  }
 
-footer {
-   margin-bottom: 0%;
-   background-color: rgba(0, 0, 0, 0.675);
-   padding: 3%;
-   color: white;
-   position:fixed;
-    bottom: 0;
-   width:100%;
-   height:100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 15px;
+    position: static;
+    width: 12em;
+    
+   
 }
+
+.card p img {
+    width: 15%;
+    float: right;
+    margin-left: 3%;
+    margin-top: -5%;
+    
+}
+
+.card p img:hover {
+    box-shadow: none;
+
+}
+
+.card img:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+  
+  
+.containerBis {
+    color: white;
+    border: 1px solid white;
+    background-color:rgba(198, 198, 198, 0.187);
+    border-radius: 15px;
+    margin-left: 5%;
+    padding: 2px 16px;
+    float: right;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .under {
     text-decoration: underline;
 }
 
 
-@media (min-width: 300px) and (max-width: 1000px) { /*responsive pour les mobiles*/ 
+#questionniaire {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: rgba(90, 90, 90, 0.379);
+    margin-bottom: 4%;
+    text-align: center;
+}
+
+#questionniaire h4 {
+    text-decoration: underline;
+}
+
+#questionniaire #maisonId img {
+    width: 2%;
+    
+    margin-left: 1%;
+    margin-bottom: -0.5%;
+}
+
+#questionniaire input {
+    margin-left: 2%;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 15%;
+    margin-top: 1%;
+    position: absolute;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  
+
+
+
+  @media (min-width: 300px) and (max-width: 1000px) { /*responsive pour les mobiles*/ 
+    body{
+        font-size: 2em;
+    }
+
+    h1{
+        margin-bottom: 15%;
+    }
+    h2{
+        margin-bottom: 15%;
+        text-align: center;
+    }
     .card img {
         margin-top: 5%;
-        border-radius: 15px;
+        border-radius: 20px;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -105,7 +233,198 @@ footer {
         transition: 0.3s;
         width: 70%;
         border-radius: 15px;
-        background-color:whitesmoke;
+    
+        
       }
+
+      #questionniaire {
+        border: 2px solid black;
+        border-radius: 15px;
+        padding: 3%;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: rgba(90, 90, 90, 0.379);
+        margin-bottom: 4%;
+        text-align: center;
+    }
+    .containerBis {
+        color: white;
+        border: 1px solid white;
+        background-color:rgba(198, 198, 198, 0.187);
+        border-radius: 15px;
+        margin-left: 5%;
+        padding: 2px 16px;
+        position: absolute;
+        margin-top: 50%;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card img {
+
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        position:sticky;
+        width: 12em;
+        
+       
+    }
   }
   
+/*TEST*/
+
+input[type="radio"]{
+    display: none;
+  }
+  input[type="radio"]:hover +label{
+    border: 1px solid white;
+    color: white;
+  }
+  input[type="radio"]:checked +label{
+  color: white;
+    border: 1px solid transparent;
+    }
+    input[type="radio"] + label {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    color: #000;
+    transition: all 0.5s ease-in-out;
+  }
+
+
+/*YEUX */
+  /*BLEU*/
+  input[type="radio"]#yeuxB:hover + label {
+    background-color:blue;
+  }
+  input[type="radio"]#yeuxB:checked + label {
+    background-color: blue;
+    border-color: blue
+  }
+  /*BLEU CLAIRE*/
+  input[type="radio"]#yeuxG:hover + label {
+    background-color: rgb(103, 209, 255);
+  }
+  input[type="radio"]#yeuxG:checked + label {
+    background-color:rgb(103, 209, 255);
+    border-color: rgb(103, 209, 255);
+  }
+  /*ROUGE*/
+  input[type="radio"]#yeuxR:hover + label {
+    background-color: #ff4242;
+  }
+  input[type="radio"]#yeuxR:checked + label {
+    background-color:#ff4242;
+    border-color: #ff4242;
+  }
+  /*MARRON*/
+  input[type="radio"]#yeuxM:hover + label {
+    background-color: #964B00;
+  }
+  input[type="radio"]#yeuxM:checked + label {
+    background-color:#964B00;
+    border-color: #964B00;
+  }
+  /*VERT*/
+  input[type="radio"]#yeuxV:hover + label {
+    background-color: #50C878;
+  }
+  input[type="radio"]#yeuxV:checked + label {
+    background-color:#50C878;
+    border-color: #50C878;
+  }
+/*CHEVEUX*/
+/*BRUN*/
+  input[type="radio"]#cheveuxBr:hover + label {
+    background-color:#964B00;
+  }
+  input[type="radio"]#cheveuxBr:checked + label {
+    background-color: #964B00;
+    border-color: #964B00;
+  }
+/*BLOND*/
+input[type="radio"]#cheveuxB:hover + label {
+    background-color:#faf0be;
+  }
+  input[type="radio"]#cheveuxB:checked + label {
+    background-color: #faf0be;
+    border-color: #faf0be;
+  }
+/*ROUX*/
+input[type="radio"]#cheveuxR:hover + label {
+    background-color:#A52A2A;
+  }
+  input[type="radio"]#cheveuxR:checked + label {
+    background-color: #A52A2A;
+    border-color: #A52A2A;
+  }
+/*NOIR*/
+input[type="radio"]#cheveuxN:hover + label {
+    background-color:#000;
+  }
+  input[type="radio"]#cheveuxN:checked + label {
+    background-color: #000;
+    border-color: #000;
+  }
+/*GRIS*/
+input[type="radio"]#cheveuxG:hover + label {
+    background-color:#D7D2C9;
+  }
+  input[type="radio"]#cheveuxG:checked + label {
+    background-color: #D7D2C9;
+    border-color: #D7D2C9;
+  }
+/*GENRE*/ 
+/*HOMME*/
+input[type="radio"]#homme:hover + label {
+    background: linear-gradient(to right, blue, pink);
+  }
+  input[type="radio"]#homme:checked + label {
+    background: linear-gradient(to right, blue, pink);
+    border-color:white ;
+  }
+/*femme*/
+  input[type="radio"]#femme:hover + label {
+    background: linear-gradient(to left, blue, pink);
+  }
+  input[type="radio"]#femme:checked + label {
+    background: linear-gradient(to left, blue, pink);
+    border-color:white ;
+  }
+/*MAISON*/ 
+/*GRIFFONDOR*/ 
+input[type="radio"]#maisonG:hover + label {
+    background: rgba(254, 73, 73, 1);
+  }
+  input[type="radio"]#maisonG:checked + label {
+    background: rgba(254, 73, 73, 1);
+    border-color:rgba(254, 73, 73, 1) ;
+  }
+/*Poufsouffle*/ 
+input[type="radio"]#maisonP:hover + label {
+    background: #fceb00;
+  }
+  input[type="radio"]#maisonP:checked + label {
+    background: #fceb00;
+    border-color:#fceb00;
+  }
+/*SERDAIGLE*/ 
+input[type="radio"]#maisonS:hover + label {
+    background: #3a6efe;
+  }
+  input[type="radio"]#maisonS:checked + label {
+    background:#3a6efe;
+    border-color:#3a6efe ;
+  }
+/*GRIFFONDOR*/ 
+input[type="radio"]#maisonSerp:hover + label {
+    background:#1e9400;
+  }
+  input[type="radio"]#maisonSerp:checked + label {
+    background: #1e9400;
+    border-color:#1e9400;
+  }
