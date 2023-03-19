@@ -26,6 +26,7 @@ function personnage(data2) {
     const personneVar = []
     let personnagesSpe = []
 
+
     
     
     //recup des infos du formulaire
@@ -180,7 +181,8 @@ function afficheDatas(dataEntre) {//fonction d'affichage
                 }
                 nomaAfficher+= "<p class='under' >Acteur/trisse dans le film : </p><p>"+data[randomPerso]['actor']+'</p></div>';
                 ici.innerHTML = nomaAfficher; // ajout de la variable remplie au dessus à l'ID "ici"
-                myFunctionModal()
+                
+               
     
                 
             }
@@ -188,23 +190,21 @@ function afficheDatas(dataEntre) {//fonction d'affichage
 
 
 /// FONCTION MODAL 
-function myFunctionModal() {
-    // Get the modal
-var modal = document.getElementById("myModal");
+//MODAL
+let modal = document.getElementById("myModal");
+let btnModal = document.getElementById("myButton"); // l'ouvrir
+let spanModal = document.getElementsByClassName("close")[0];//le fermer
 
-// Get the button that opens the modal
-var btn = document.getElementById("myButton");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+btnModal.onclick = function() {
+
+    setTimeout(() => {   modal.style.display = "block"; }, 500);
+   
+  }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+spanModal.onclick = function() {
   modal.style.display = "none";
 }
 
@@ -213,5 +213,4 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
 }

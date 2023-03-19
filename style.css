@@ -221,13 +221,17 @@ button{
         text-align: center;
     }
     .card img {
+       
         margin-top: 5%;
         border-radius: 20px;
-        display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 10em
+        border-radius: 15px;
+        position:sticky;
+        width: 12em;
+        max-width:11em;
     }
+    
     .card {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
@@ -255,22 +259,13 @@ button{
         margin-left: 5%;
         padding: 2px 16px;
         position: absolute;
-        margin-top: 50%;
+        margin-top: 60%;
         padding-left: 5%;
         padding-right: 5%;
         margin-left: auto;
         margin-right: auto;
     }
-    .card img {
-
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 15px;
-        position:sticky;
-        width: 12em;
-        
-       
-    }
+    
   }
   
 /*TEST*/
