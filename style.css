@@ -229,7 +229,7 @@ button{
         border-radius: 15px;
         position:sticky;
         width: 12em;
-        max-width:11em;
+
     }
     
     .card {
@@ -237,6 +237,7 @@ button{
         transition: 0.3s;
         width: 70%;
         border-radius: 15px;
+        height: 100%;
     
         
       }
